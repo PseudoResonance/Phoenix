@@ -45,3 +45,16 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+hidden/*
+mysql/*
+nginx/*
+php/*
+start.bat
+stop.bat
+restart.bat
+RunHiddenConsole.exe
+configData/config.ini
+www/phpmyadmin/*
+www/images/*
+www/uploads/*

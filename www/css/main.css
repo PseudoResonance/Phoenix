@@ -1,0 +1,239 @@
+@charset "UTF-8";
+@font-face {
+	font-family:"wf_segoe-ui_normal";
+	src:url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.eot");
+	src:local("Segoe UI"),url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.eot?#iefix") format("embedded-opentype"),url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.woff") format("woff"),url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.ttf") format("truetype"),url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.svg#web") format("svg");
+	font-weight:normal;
+	font-style:normal
+}
+
+@font-face {
+	font-family:"wf_segoe-ui_semibold";
+	src:url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.eot");
+	src:local("Segoe UI Semibold"),url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.eot?#iefix") format("embedded-opentype"),url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.woff") format("woff"),url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.ttf") format("truetype"),url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.svg#web") format("svg");
+	font-weight:normal;
+	font-style:normal
+}
+
+@font-face {
+	font-family:"wf_segoe-ui_semilight";
+	src:url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.eot");
+	src:local("Segoe UI Semilight"),url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.eot?#iefix") format("embedded-opentype"),url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.woff") format("woff"),url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.ttf") format("truetype"),url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.svg#web") format("svg");
+	font-weight:normal;
+	font-style:normal
+}
+
+body {
+background:#fafafa;
+font-size:100%
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+font-family:"Segoe UI Semilight","wf_segoe-ui_semilight","Arial",sans-serif
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-bottom:-13px
+}
+
+html,
+body {
+height:100%;
+body:100%
+}
+
+#pageTitle {
+margin-top:0px;
+margin-bottom:-30px
+}
+
+.article > hr {
+margin-top:50px
+}
+
+.article > h2 {
+margin-top:-10px
+}
+
+.article > h6 {
+color:#666;
+margin-bottom:2px;
+margin-top:15px
+}
+
+#body {
+position:absolute;
+top:3%;
+left:6%;
+right:6%;
+font-weight:normal;
+line-height:1.5;
+font-family:"Segoe UI","wf_segoe-ui_normal","Arial",sans-serif;
+text-align:justify;
+text-justify:inter-word
+}
+
+#content {
+background:#fff;
+padding-top:2px;
+padding-bottom:2px;
+padding-left:15px;
+padding-right:15px;
+border-style:solid;
+border-width:3px;
+border-color:#ddd
+}
+
+#header {
+font-family:"Segoe UI Semilight","wf_segoe-ui_semilight","Arial",sans-serif;
+text-align:center
+}
+
+#navigation {
+text-align:center;
+word-wrap:break-word
+}
+
+#navigation > span {
+line-height:2.0
+}
+
+#navigation > h4 {
+margin-top:-15px;
+}
+
+#footer {
+font-size:80%;
+padding-bottom:8px
+}
+
+hr {
+border-color:#ddd;
+border-style:solid;
+margin-top:0.5em;
+margin-bottom:1em
+}
+
+#title {
+font-size:300%;
+margin-bottom:20px
+}
+
+#hr {
+display:block;
+text-align:center;
+white-space:nowrap;
+font-size:140%;
+overflow:hidden
+}
+
+#hr > span {
+position:relative;
+display:inline-block
+}
+
+#hr > span:before,
+#hr > span:after {
+content:"";
+position:absolute;
+top:50%;
+width:1000%;
+height:3px;
+background:#ddd
+}
+
+#hr > span:before {
+right:100%;
+margin-right:20px
+}
+
+#hr > span:after {
+left:100%;
+margin-left:20px
+}
+
+#clear {
+margin-bottom:3%
+}
+
+img.text {
+max-width:100%;
+height:auto;
+display:inline-block
+}
+
+a:link,a:visited {
+color:#555;
+text-decoration:underline;
+transition-property:color;
+-webkit-transition-property:color;
+-moz-transition-property:color;
+-o-transition-property:color;
+transition-duration:.4s;
+-webkit-transition-duration:.4s;
+-moz-transition-duration:.4s;
+-o-transition-duration:.4s
+}
+
+a:active,a:hover {
+color:#000
+}
+
+a.nav:link,a.nav:visited {
+color:#000;
+text-decoration:none;
+border-bottom:1px solid transparent;
+transition-property:border-color;
+-webkit-transition-property:border-color;
+-moz-transition-property:border-color;
+-o-transition-property:border-color;
+transition-duration:.4s;
+-webkit-transition-duration:.4s;
+-moz-transition-duration:.4s;
+-o-transition-duration:.4s
+}
+
+a.nav:active,a.nav:hover {
+text-decoration:none;
+border-color:#000
+}
+
+a.navigation:link,a.navigation:visited {
+color:#000;
+border:1px solid;
+background:#eee;
+border-color:#ccc;
+text-decoration:none;
+padding-left:7px;
+padding-right:7px;
+transition-property:border-color,background;
+-webkit-transition-property:border-color,background;
+-moz-transition-property:border-color,background;
+-o-transition-property:border-color,background;
+transition-duration:.4s;
+-webkit-transition-duration:.4s;
+-moz-transition-duration:.4s;
+-o-transition-duration:.4s
+}
+
+a.navigation:active,a.navigation:hover {
+text-decoration:none;
+background:#ddd;
+border-color:#bbb
+}
+
+noscript > h1 {
+color:#ff0000;
+padding-bottom:10px;
+overflow:visible
+}

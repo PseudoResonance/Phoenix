@@ -1,0 +1,14 @@
+<meta charset="UTF-8">
+<meta name="description" content="Kentridge Robotics Team 3786 Website">
+<meta name="keywords" content="Robotics, Kentridge, 3786, FIRST">
+<meta name="author" content="Josh Otake">
+<base href="/" target="_parent">
+<link rel="stylesheet" href="css/main.css">
+<script src="js/main.js"></script>
+<script src="js/moment.js"></script
+<script src="js/moment-data.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
