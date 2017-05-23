@@ -58,4 +58,4 @@ www/phpmyadmin/*
 www/images/*
 www/uploads/*
 www/server_indices.php
-*.ini
+configData/config.ini
