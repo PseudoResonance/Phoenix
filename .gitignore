@@ -54,8 +54,8 @@ start.bat
 stop.bat
 restart.bat
 RunHiddenConsole.exe
-configData/config.ini
 www/phpmyadmin/*
 www/images/*
 www/uploads/*
 www/server_indices.php
+*.ini
