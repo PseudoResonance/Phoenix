@@ -2,24 +2,14 @@
 <div id="hr">
 <span>
 <?php
-$handle = fopen("../configData/header.txt", "r");
+$ini = parse_ini_file("config.ini",true);
+$navigationData = $ini["Navigation"];
 $echo = "";
-if ($handle) {
-	while (($line = fgets($handle)) !== false) {
-		$parts = explode(": ", $line);
-		if (isset($parts[1])) {
-			$url = preg_replace("/\r|\n/", "", $parts[1]);
-		} else {
-			$url = "/";
-		}
-		$echo .= "<a href=\"" . $url . "\" class=\"nav\">" . $parts[0] . "</a>&nbsp&nbsp";
-	}
-	fclose($handle);
-	$echo = rtrim($echo, "&nbsp&nbsp");
-	echo $echo;
-} else {
-	echo "A fatal error has occurred! Please contact the site administrator!";
-} 
+foreach ($navigationData as $key => $value) {
+	$echo .= "<a href=\"" . $value . "\" class=\"nav\">" . $key . "</a>&nbsp&nbsp";
+}
+$echo = rtrim($echo, "&nbsp&nbsp");
+echo $echo;
 ?>
 </span>
 </div>

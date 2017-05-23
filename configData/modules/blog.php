@@ -1,3 +1,4 @@
+<h1 id="pageTitle">Blog</h1>
 <?php
 $pageError = true;
 if (isset($_GET['page'])) {
@@ -16,7 +17,6 @@ if (isset($_GET['page'])) {
 	$page = 1;
 	$pageError = false;
 }
-include "mysql.php";
 if ($connection && !$pageError) {
 	$sql = "SELECT COUNT(*) FROM `blog`";
 	$result = mysqli_query($conn,$sql);
@@ -46,6 +46,7 @@ if ($connection && !$pageError) {
 				$previous = $page - 1;
 				$echo .=  "<a class=\"navigation\" href=/" . $pageID . "?page=" . $previous . ">Previous</a>&nbsp&nbsp";
 			}
+			$URI = ltrim(rtrim($_SERVER['SCRIPT_NAME'], ".php"), "/");
 			if ($maxID > 11) {
 				$low = $page - 5;
 				if ($low <= 0) {
@@ -56,22 +57,22 @@ if ($connection && !$pageError) {
 					$max = $maxID;
 				}
 				for ($i = $low; $i < $page; $i++) {
-					$echo .=  "<a class=\"navigation\" href=/" . $pageID . "?page=" . $i . ">" . $i . "</a>&nbsp&nbsp";
+					$echo .=  "<a class=\"navigation\" href=/" . $URI . "?page=" . $i . ">" . $i . "</a>&nbsp&nbsp";
 				}
 				for ($i = $page + 1; $i <= $max; $i++) {
-					$echo .=  "<a class=\"navigation\" href=/" . $pageID . "?page=" . $i . ">" . $i . "</a>&nbsp&nbsp";
+					$echo .=  "<a class=\"navigation\" href=/" . $URI . "?page=" . $i . ">" . $i . "</a>&nbsp&nbsp";
 				}
 			} else {
 				for ($i = 1; $i <= $maxID; $i++) {
 					if ($i != $page) {
-						$echo .=  "<a class=\"navigation\" href=/" . $pageID . "?page=" . $i . ">" . $i . "</a>&nbsp&nbsp";
+						$echo .=  "<a class=\"navigation\" href=/" . $URI . "?page=" . $i . ">" . $i . "</a>&nbsp&nbsp";
 					}
 				}
 			}
 			if ($page < $maxID) {
 				$next = $page + 1;
-				$echo .=  "<a class=\"navigation\" href=/" . $pageID . "?page=" . $next . ">Next</a>&nbsp&nbsp";
-				$echo .=  "<a class=\"navigation\" href=/" . $pageID . "?page=" . $maxID . ">Last</a>&nbsp&nbsp";
+				$echo .=  "<a class=\"navigation\" href=/" . $URI . "?page=" . $next . ">Next</a>&nbsp&nbsp";
+				$echo .=  "<a class=\"navigation\" href=/" . $URI . "?page=" . $maxID . ">Last</a>&nbsp&nbsp";
 			}
 			if ($maxID > 1) {
 				$echo = rtrim($echo, "&nbsp&nbsp");
@@ -85,6 +86,4 @@ if ($connection && !$pageError) {
 		echo "<br /><hr /><p>Invalid page number!</p>";
 	}
 }
-
-$conn->close();
 ?>
